@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Form</title>
+</head>
+<body>
+    <div>
+        <form action="/customer/create" method="post" th:object="${customer}">
+            <input type="hidden" th:field="*{id}" name="id" >
+            <div>
+                <Span>NAME</Span>
+                <input type="text" th:field="*{name}" name="name">
+            </div>
+            <div>
+                <Span>PHONE</Span>
+                <input type="text" th:field="*{phoneNumber}" name="phoneNumber">
+            </div>
+            <button type="submit">CREATE</button>
+        </form>
+<!--        <div>-->
+<!--            <p th:text="${message}"></p>-->
+<!--        </div>-->
+    </div>
+</body>
+</html>
